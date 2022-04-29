@@ -1,0 +1,21 @@
+<%- include('./partial/header'); %>
+<%- include('./partial/managerfunction'); %>
+
+<style>
+  h1,h4{color:black;}
+</style>
+
+    <div class="col-sm-6" style="flex: 0 0 50%; max-width: 50%; margin-left: 431px;margin-top: -175px; text-align: -webkit-center; border-style: solid; border-width: 0.5px; background-color: #c7eff5;">
+      <div class="thumbnail">
+        <img style="height:150px;width:150px;border-radius: 100%" src="<%=manager.image%>" />
+        <h1><strong>Name:</strong> <%=manager.name%></h1>
+        <h4><strong>Type:</strong><%=manager.type%></h4>
+        <h4>Username: <%=manager.username%></h4>
+        <h4>Department:<%=manager.department%></h4>
+      </div>
+      <a class="btn btn-warning" href="/manager/<%=manager._id%>/edit">Edit</a>
+    </div>
+  </div>
+</div>
+
+<%- include('./partial/footer'); %>

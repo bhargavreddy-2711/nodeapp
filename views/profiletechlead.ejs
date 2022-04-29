@@ -1,0 +1,22 @@
+<%- include('./partial/header'); %>
+<%- include('./partial/techleadfunction');%>
+
+<style>
+  h4,h1{ color:black;font:medium;}
+</style>
+
+<div class="col-sm-6" style="flex: 0 0 50%; max-width: 50%; margin-left: 431px; margin-top: -251px;  text-align: -webkit-center; background-color:#c7eff5;">
+      <div class="thumbnail">
+        <img style="height:150px;width:150px;border-radius: 100%" src="<%=techlead.image%>" />
+        <h1><strong>Name: </strong> <%=techlead.name%></h1>
+        <h4><strong>Position: </strong><%=techlead.type%></h4>
+        <h4>Username:  <%=techlead.username%></h4>
+        <h4>Salary: <%=techlead.salary%></h4>
+        <h4>Department: <%=techlead.department%></h4>
+      </div>
+      <a class="btn btn-warning" href="/techlead/<%=techlead._id%>/edit">Edit</a>
+    </div>
+  </div>
+</div>
+
+<%- include('./partial/footer'); %>

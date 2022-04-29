@@ -1,0 +1,17 @@
+<%-include('./partial/header'); %>
+<%- include('./partial/empfunction'); %>
+<style>
+  h1,h4{color:black;font:italic}
+</style>
+<div class="col-sm-6" style="flex: 0 0 50%; max-width: 60%; margin-left: 431px; margin-top: -261px;  text-align: -webkit-center;">
+      <div class="thumbnail" style="border: 0.5px; border-style: solid; background-color: #c7eff5;">
+        <img style="height:150px;width:150px;border-radius: 100%" src="<%=employee.image%>"/>
+        <h1><strong>Name:</strong> <%=employee.name%></h1>
+        <h4><strong>Type:</strong><%=employee.type%></h4>
+        <h4>Username: <%=employee.username%></h4>
+        <h4>Department:<%=employee.department%></h4>
+        <h4>Salary: <%=employee.salary%></h4>
+      </div>
+    </div>
+
+<%- include('./partial/footer'); %>

@@ -1,0 +1,41 @@
+<%- include('./partial/header'); %>
+<br><br><br><br>
+<div class="container" style=" position: relative; border-radius: 5px; background-color: #c7eff5; padding: 20px 0 30px 0; width: 40%;">
+  
+      <form action="/manager/<%=manager._id%>?_method=PUT" method="POST">
+        <div class="row">
+          <div class="col">
+            <h1 style="text-align:center; color: black;font:italic">Edit Profile <%= manager.name%></h1>
+
+            <div class="form-group form-inline">
+                <label for="name" style="width: 100px; display: inline-block; text-align: right;">Name</label>&nbsp; &nbsp;
+              <input class="form-control" type="text" id="name" value="<%= manager.name%>" name="manager[name]" style="background-color: bisque; color: black;"/>
+            </div>
+
+            <div class="form-group form-inline">
+                <label for="username" style="width: 100px; display: inline-block; text-align: right;">Username</label>&nbsp; &nbsp;
+              <input class="form-control" type="text" id="username" value="<%= manager.username%>" name="manager[username]" style="background-color: bisque; color: black;"/>
+            </div>
+
+            <div class="form-group form-inline">
+                <label for="department" style="width: 100px; display: inline-block; text-align: right;">Department</label>&nbsp; &nbsp;
+              <input class="form-control" type="text" id="department" value="<%= manager.department%>" name="manager[department]" style="background-color: bisque; color: black;"/>
+            </div>
+
+            <div class="form-group form-inline">
+                <label for="url" style="width: 100px; display: inline-block; text-align: right;">Image Url</label>&nbsp; &nbsp;
+              <input class="form-control" type="text" id="url" value="<%= manager.image%>" name="manager[image]" style="background-color: bisque; color: black;"/>
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-lg btn-primary btn-block">Submit</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <a href="/manager/<%=manager.id%>" style="color: black;">Back</a>
+    </div>
+  </div>
+</div>
+
+<%- include('./partial/footer'); %>
